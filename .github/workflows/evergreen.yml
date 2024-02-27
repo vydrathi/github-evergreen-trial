@@ -1,6 +1,6 @@
-name: Daily dependabot checks
+name: Dependabot checks
 on:
-        workflow_dispatch:
+  workflow_dispatch:
 
 permissions:
   issues: write

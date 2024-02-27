@@ -1,0 +1,21 @@
+name: Dependabot checks
+on:
+  workflow_dispatch:
+
+permissions:
+  issues: write
+
+jobs:
+  evergreen:
+    name: evergreen
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run evergreen action
+        uses: github/evergreen@v1
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          REPOSITORY: "vydrathi/ubuntu.git,vydrathi/nginx.git"
+          TITLE: "Add dependabot configuration"
+          BODY: "Please add this dependabot configuration to keep the versions and security patches up to date"
+          TYPE: pull

@@ -15,7 +15,7 @@ jobs:
         uses: github/evergreen@v1
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          REPOSITORY: "vydrathi/ubuntu.git,vydrathi/nginx.git"
+          REPOSITORY: "vydrathi/ubuntu,vydrathi/nginx"
           TITLE: "Add dependabot configuration"
           BODY: "Please add this dependabot configuration to keep the versions and security patches up to date"
           TYPE: pull
